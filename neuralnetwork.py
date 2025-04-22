@@ -10,7 +10,7 @@ import numpy as np
 # Bias -> 3
 
 class NeuralNetwork:
-    def __init__(self, in_size, hidden_size, out_size):
+    def __init__(self, in_size=10, hidden_size, out_size):
         self.w1 =  np.random.rand(hidden_size, in_size) 
         self.b1 =  np.random.rand(hidden_size, 1) 
         
