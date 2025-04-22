@@ -10,7 +10,9 @@ import numpy as np
 # Bias -> 3
 
 class NeuralNetwork:
-    def __init__(self, in_size=10, hidden_size, out_size):
+    def __init__(self, in_size=10, hidden_size, out_size, learning_rate=0.001):
+        
+        self.learning_rate = learning_rate
         self.w1 =  np.random.rand(hidden_size, in_size) 
         self.b1 =  np.random.rand(hidden_size, 1) 
         
@@ -24,6 +26,7 @@ class NeuralNetwork:
         self.Z2 = None
         self.A2 = None
 
+        
         return 
     
     def forward(self, input):
@@ -39,6 +42,14 @@ class NeuralNetwork:
     def backwords(self, Y):
         ...
 
+    def update(self):
+        self.w1 = self.w1 - self.learning_rate * ()
+        self.b1 =
+
+        self.w2 = self.w2 - self.learning_rate * ()
+        self.b1 =
+
+        
     def ReLu(self, Z):
         return np.maximum(0,Z)
     
